@@ -125,6 +125,9 @@ nav .openbtn {
   justify-content: center;
   align-self: center;
 }
+.container > .hero button svg {
+  margin-right: 0.89em;
+}
 /* End Hero */
 
 .container > .works {
@@ -245,33 +248,47 @@ nav .openbtn {
   justify-content: center;
   align-self: center;
 }
+.container > .cta button svg {
+  margin-right: 0.89em;
+}
 /* End CTA */
 
 /* Start Footer */
-.container > .footer {
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 6.6em;
 }
-.container > .footer .line {
+.line {
   background-color: #696969;
   height: 0.1em;
   width: 100%;
   margin-bottom: 4.8em;
 }
-.container > .footer img {
+.footer img {
   width: 24.9em;
   margin-bottom: 3.5em;
 }
-.container > .footer p {
+.footer p {
   font-size: 1.6rem;
   font-weight: 600;
   color: #959595;
 }
-.container > .footer p span {
+.footer p span {
   color: #ececec;
+}
+.footer .icons {
+  display: flex;
+  flex-direction: row;
+  gap: 3.2em;
+  margin-bottom: 3.5em;
+}
+.footer .icons i {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #959595;
 }
 @media only screen and (min-width: 450px) {
   .sidebar {
@@ -331,10 +348,29 @@ nav .openbtn {
   .container > .feature .gallery-2 img {
     width: 45%;
   }
+  .container > .products .gallery-3 {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 2.4em;
+    width: 30%;
+    align-items: center;
+    margin-bottom: 20em;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding-bottom: 3.6em;
+  }
+  .footer img {
+    margin-bottom: 0;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   .container > .hero {
@@ -350,9 +386,9 @@ nav .openbtn {
   .container > .hero .details p {
     text-align: left;
   }
-  .container > .hero button {
+  /* .container > .hero button {
     display: flex;
     justify-content: left;
     align-self: left;
-  }
+  } */
 }
