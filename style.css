@@ -113,8 +113,7 @@ nav .openbtn {
   text-align: center;
   justify-content: center;
 }
-.container > .hero button {
-  display: flex;
+.container > .hero a button{
   background-color: #9d9d9d;
   padding: 0.89em 1.23em;
   font-size: 1.8rem;
@@ -122,11 +121,14 @@ nav .openbtn {
   color: white;
   border-radius: 0.22em;
   border-style: none;
-  justify-content: center;
-  align-self: center;
 }
 .container > .hero button svg {
   margin-right: 0.89em;
+}
+.container > .hero .img-wrap img {
+  width: 24em;
+  height: 24em;
+  border-radius: 50%;
 }
 /* End Hero */
 
@@ -236,8 +238,7 @@ nav .openbtn {
   text-align: center;
   margin-bottom: 2.67em;
 }
-.container > .cta button {
-  display: flex;
+.container > .cta a button {
   background-color: #9d9d9d;
   padding: 0.89em 1.23em;
   font-size: 1.8rem;
@@ -245,8 +246,6 @@ nav .openbtn {
   color: white;
   border-radius: 0.22em;
   border-style: none;
-  justify-content: center;
-  align-self: center;
 }
 .container > .cta button svg {
   margin-right: 0.89em;
@@ -299,14 +298,14 @@ nav .openbtn {
   }
 }
 @media only screen and (min-width: 600px) {
-  .container > .hero h1 {
+  /* .container > .hero h1 {
     align-self: center;
     width: 20ch;
   }
   .container > .hero p {
     align-self: center;
     width: 45ch;
-  }
+  } */
 }
 @media only screen and (min-width: 800px) {
   nav .menu {
@@ -320,9 +319,7 @@ nav .openbtn {
   nav .openbtn {
     display: none;
   }
-  .container > .works {
-    padding: 0 2.9em;
-  }
+
   .container > .works .gallery-1 {
     display: flex;
     flex-direction: row;
@@ -331,11 +328,10 @@ nav .openbtn {
     margin-bottom: 11.6em;
     justify-content: center;
   }
-  /*Inversion*/
-  .container > .works .gallery-1 h3 {
-    top: 1150px;
-    left: 150px;
-  }
+
+.container div {
+    border-radius: 0.44em;
+}
   .container > .feature .gallery-2 {
     display: flex;
     flex-direction: row;
@@ -345,15 +341,13 @@ nav .openbtn {
     justify-content: center;
     margin-bottom: 20em;
   }
-  .container > .feature .gallery-2 img {
-    width: 45%;
-  }
+
   .container > .products .gallery-3 {
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     gap: 2.4em;
-    width: 30%;
+    /* width: 30%; */
     align-items: center;
     margin-bottom: 20em;
   }
@@ -361,7 +355,7 @@ nav .openbtn {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     padding-bottom: 3.6em;
   }
   .footer img {
@@ -386,9 +380,39 @@ nav .openbtn {
   .container > .hero .details p {
     text-align: left;
   }
-  /* .container > .hero button {
-    display: flex;
-    justify-content: left;
-    align-self: left;
-  } */
+  .container > .hero .img-wrap img {
+    width: 40em;
+    height: 40em;
+    border-radius: 50%;
+  }
+  .container > .feature .gallery-2 {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 258px 258px 258px;
+    grid-template-areas: 
+    'grid-1 grid-2 grid-3'
+    'grid-4 grid-5 grid-6'
+    ;
+    gap: 1.6em;
+    width: 100%;
+    place-content: center;
+  }
+  .container > .feature .gallery-2 box-5 {
+    grid-area: grid-1;
+  }
+  .container > .feature .gallery-2 box-6 {
+    grid-area: grid-2;
+  }
+  .container > .feature .gallery-2 box-7 {
+    grid-area: grid-3;
+  }
+  .container > .feature .gallery-2 box-8 {
+    grid-area: grid-4;
+  }
+  .container > .feature .gallery-2 box-9 {
+    grid-area: grid-5;
+  }
+  .container > .feature .gallery-2 box-10 {
+    grid-area: grid-6;
+  }
 }
